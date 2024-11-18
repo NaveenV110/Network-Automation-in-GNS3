@@ -1,4 +1,4 @@
-# GNS3 Network Automation Web Interface
+# Network Automation in GNS3
 
 This project provides a simple web interface to interact with a GNS3 topology. Users can select a router, enter commands, and execute them directly on the selected router using SSH. The results of the command execution are displayed in the web interface.
 
@@ -30,7 +30,7 @@ This project provides a simple web interface to interact with a GNS3 topology. U
 
 The following diagram illustrates the network setup:
 
-![Topology Diagram](image.png)
+![Topology Diagram](topology.png)
 
 - **Network Segments**:
   - 192.168.0.0/24: Network connecting R1 and R2.
