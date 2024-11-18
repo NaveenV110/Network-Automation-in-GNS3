@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Command Center</title>
+</head>
+<body>
+    <h1>Network Command Center</h1>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    <form method="POST">
+        <label for="device">Select a Device:</label>
+        <select name="device" id="device" required>
+            <option value="" disabled selected>Select a router</option>
+            {% for name, details in routers.items() %}
+                <option value="{{ name }}">{{ name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        
+        <label for="command">Enter Command:</label>
+        <input type="text" id="command" name="command" required>
+        <br><br>
+
+        <button type="submit">Execute Command</button>
+    </form>
+</body>
+</html>
